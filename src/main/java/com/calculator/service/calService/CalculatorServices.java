@@ -22,6 +22,11 @@ public class CalculatorServices {
         return new Response(x, y, x*y);
     }
 
+    @GetMapping("/per/{x}/{y}")
+    public Response per(@PathVariable int x, @PathVariable int y){
+        return new Response(x, y, (x*y)/100);
+    }
+
     @GetMapping("/div/{x}/{y}")
     public Response div(@PathVariable int x, @PathVariable int y){
         return new Response(x, y, x/y);
